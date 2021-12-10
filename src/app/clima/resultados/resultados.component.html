@@ -1,0 +1,31 @@
+
+
+<div *ngFor="let item of resultado" class="contenedor">
+
+    <div class="card text-white bg-dark mb-3" style="width: 24rem; height: 300px">
+        <div class="card-header"><h4>{{resultado[0].name}}</h4></div>
+        <div class="card-body">
+          <p class="card-text">Temperatura: {{resultado[0].main.temp}}°C</p>
+          <p class="card-text">Sensación térmica: {{resultado[0].main.feels_like}}°C</p>
+          <p class="card-text">Descripción: {{resultado[0].weather[0].description}}</p>
+          <p class="card-text">Humedad: {{resultado[0].main.humidity}}%</p>
+        </div>
+    </div>
+
+    <div class="contenedorNoticias">
+      <div class="row  pb-3" *ngFor="let item of noticias" style="max-width: 600px;">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{item.title}}</h5>
+              <p class="card-text">Fecha de publicación: {{item.pubDate}}</p>
+              <a href="#" class="btn btn-primary">Leer más</a>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    
+
+
+</div>
